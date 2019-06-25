@@ -6,7 +6,10 @@ echo
 echo Este processo irá instalar o Python 3.7.3, Git para poder prosseguir.
 echo Se deseja continuar, pressione qualquer tecla
 echo Caso contrário, feche esta janela.
-
+PAUSE
+cls
+echo Instalador - Automação de Outbound via IDOC
+echo
 bin\bin\wget.exe http://invqasrv18/tf.portal/downloads/python-3.7.3.exe
 python-3.7.3.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
 del python-3.7.3.exe
