@@ -45,6 +45,6 @@ cd ..
 RMDIR /Q/S bin
 del Instalador.zip
 cd idocmanager
-python Iniciar.cmd
+python Iniciar.py
 cd ..
 del Instalador.cmd
