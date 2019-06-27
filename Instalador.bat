@@ -12,16 +12,20 @@ echo .
 echo .
 
 echo Deseja continuar?
+set instalar=false
 set /P continuar="Digite S ou N: "
-IF [continuar]==[S] or [s] (
+IF %continuar% == S set instalar=true 
+IF %continuar% == s set instalar=true
+IF %instalar% == true (
     GOTO iniciar_install
-)   ELSE    (
+)   
+IF %instalar% == false (
     GOTO finalizar_install
 )
 :iniciar_install
 cls
 echo Instalador - Automacao de Outbound via IDOC
-echo Voce ja tem o python instalado? 
+echo Voce ja tem o python 3.7.3 instalado? 
 set /P python="Digite S ou N: "
 echo .
 echo .
@@ -82,5 +86,5 @@ python ./idocmanager/Iniciar.py
 :finalizar_install
 echo Finalizamos por aqui!
 pause
-del instalador.zip
-del Instalador.bat
+REM del instalador.zip
+REM del Instalador.bat
