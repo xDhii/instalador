@@ -28,7 +28,7 @@ echo .
 echo .
 IF [python]==[S] (
     GOTO instalar_python
-)   ELSE    (
+)   ELSE (
     GOTO pular_python
 )
 
