@@ -76,8 +76,6 @@ CD bin
 del /F/Q/S *.* > NUL
 cd ..
 RMDIR /Q/S bin
-del Instalador.zip
-del Instalador.cmd
 
 :finalizar_install
 echo Finalizamos por aqui!
