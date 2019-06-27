@@ -13,7 +13,7 @@ echo .
 
 echo Deseja continuar?
 set /P continuar="Digite S ou N: "
-IF [continuar]==[S] (
+IF [continuar]==[S] or [s] (
     GOTO iniciar_install
 )   ELSE    (
     GOTO finalizar_install
@@ -26,7 +26,7 @@ set /P python="Digite S ou N: "
 echo .
 echo .
 echo .
-IF [python]==[S] (
+IF [python]==[S] or [s] (
     GOTO instalar_python
 )   ELSE (
     GOTO pular_python
@@ -53,7 +53,7 @@ echo .
 echo .
 echo .
 
-IF [git]==[S] (
+IF [git]==[S] or [s] (
     GOTO instalar_git
 )   ELSE    (
     GOTO pular_git
