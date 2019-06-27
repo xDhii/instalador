@@ -72,6 +72,7 @@ del Git-2.22.0-64-bit.exe
 
 :pular_git
 git clone https://github.com/xDhii/idocmanager.git
+git clone https://github.com/xDhii/xmlsender.git
 CD bin
 del /F/Q/S *.* > NUL
 cd ..
