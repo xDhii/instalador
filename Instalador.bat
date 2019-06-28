@@ -81,7 +81,7 @@ CD bin
 del /F/Q/S *.* > NUL
 cd ..
 RMDIR /Q/S bin
-python ./idocmanager/Iniciar.py
+python ./idocmanager/idocmanager.py
 
 :finalizar_install
 echo Finalizamos por aqui!
