@@ -80,5 +80,5 @@ python ./idocmanager/idocmanager.py
 :finalizar_install
 echo Finalizamos por aqui!
 pause
-REM del instalador.zip
-REM del Instalador.bat
+del instalador.zip
+del Instalador.bat
