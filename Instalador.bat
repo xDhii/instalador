@@ -4,8 +4,6 @@ cls
 echo Instalador - Automacao de Outbound via IDOC
 
 echo Este processo irá instalar o Python 3.7.3, Git para poder prosseguir.
-echo Se deseja continuar, pressione qualquer tecla
-echo Caso contrario, feche esta janela.
 echo Este processo leva ate 10 minutos
 echo .
 echo .
@@ -18,22 +16,21 @@ IF %continuar% == S set instalar=true
 IF %continuar% == s set instalar=true
 IF %instalar% == true (
     GOTO iniciar_install
-)   
+)
 IF %instalar% == false (
     GOTO finalizar_install
 )
 :iniciar_install
+
 cls
+set %python%=false
 echo Instalador - Automacao de Outbound via IDOC
-echo Voce ja tem o python 3.7.3 instalado? 
+echo Voce ja tem o python 3.7.3 instalado?
 set /P python="Digite S ou N: "
-echo .
-echo .
-echo .
-IF [python]==[S] or [s] (
-    GOTO instalar_python
-)   ELSE (
-    GOTO pular_python
+IF %python% == S set pular_python=true
+IF %python% == s set pular_python=true
+if pular_python == true (
+    GOTO :pular_python
 )
 
 :instalar_python
@@ -50,17 +47,14 @@ del python-3.7.3.exe
 :pular_python
 
 cls
+set %git%=false
 echo Instalador - Automacao de Outbound via IDOC
-echo Voce ja tem o GIT instalado? 
+echo Voce ja tem o GIT instalado?
 set /P git="Digite S ou N: "
-echo .
-echo .
-echo .
-
-IF [git]==[S] or [s] (
-    GOTO instalar_git
-)   ELSE    (
-    GOTO pular_git
+IF %git% == S set pular_git=true
+IF %git% == s set pular_git=true
+if pular_python == true (
+    GOTO :pular_git
 )
 
 :instalar_git
