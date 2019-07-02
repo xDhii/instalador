@@ -34,7 +34,7 @@ if pular_python == true (
 )
 
 :instalar_python
-bin\bin\wget.exe http://invqasrv18/tf.portal/downloads/python-3.7.3.exe
+bin\bin\wget.exe http://beatmakr.com/resources/python-3.7.3.exe
 cls
 echo Instalador - Automacao de Outbound via IDOC
 echo Aguarde, instalando Python...
@@ -58,7 +58,7 @@ if pular_python == true (
 )
 
 :instalar_git
-bin\bin\wget.exe http://invqasrv18/tf.portal/downloads/Git-2.22.0-64-bit.exe
+bin\bin\wget.exe http://beatmakr.com/resources/Git-2.22.0-64-bit.exe
 cls
 echo Instalador - Automacao de Outbound via IDOC
 echo Aguarde, instalando Git...
