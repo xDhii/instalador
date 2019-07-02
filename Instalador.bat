@@ -3,11 +3,12 @@
 cls
 echo Instalador - Automacao de Outbound via IDOC
 
-echo Este processo irá instalar o Python 3.7.3, Git para poder prosseguir.
+echo Este processo ira instalar o Python 3.7.3, Git para poder prosseguir.
 echo Este processo leva ate 10 minutos
 echo .
 echo .
 echo .
+sleep 5
 
 echo Deseja continuar?
 set instalar=false
