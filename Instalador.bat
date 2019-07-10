@@ -3,7 +3,7 @@
 cls
 echo Instalador - Automacao de Outbound via IDOC
 
-echo Este processo ira instalar o Python 3.7.3, Git para poder prosseguir.
+echo Este processo ira instalar o Python 3.7.3 e o Git para poder prosseguir.
 echo Este processo leva ate 10 minutos
 echo .
 echo .
@@ -13,7 +13,7 @@ sleep 5
 echo Deseja continuar?
 set instalar=false
 set /P continuar="Digite S ou N: "
-IF %continuar% == S set instalar=true 
+IF %continuar% == S set instalar=true
 IF %continuar% == s set instalar=true
 IF %instalar% == true (
     GOTO iniciar_install
@@ -26,10 +26,10 @@ IF %instalar% == false (
 cls
 set %python%=false
 echo Instalador - Automacao de Outbound via IDOC
-echo Voce ja tem o python 3.7.3 instalado?
+echo Deseja instalar o Python 3.7.3?
 set /P python="Digite S ou N: "
-IF %python% == S set pular_python=true
-IF %python% == s set pular_python=true
+IF %python% == N set pular_python=true
+IF %python% == n set pular_python=true
 if pular_python == true (
     GOTO :pular_python
 )
@@ -50,10 +50,10 @@ del python-3.7.3.exe
 cls
 set %git%=false
 echo Instalador - Automacao de Outbound via IDOC
-echo Voce ja tem o GIT instalado?
+echo Deseja instalar o GIT?
 set /P git="Digite S ou N: "
-IF %git% == S set pular_git=true
-IF %git% == s set pular_git=true
+IF %git% == N set pular_git=true
+IF %git% == n set pular_git=true
 if pular_python == true (
     GOTO :pular_git
 )
@@ -66,7 +66,7 @@ echo Aguarde, instalando Git...
 echo .
 echo .
 echo .
-Git-2.22.0-64-bit.exe  /VERYSILENT /NORESTART /NOCANCEL /SP- /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS /COMPONENTS="icons,ext\reg\shellhere,assoc,assoc_sh"
+Git-2.22.0-64-bit.exe /VERYSILENT /NORESTART /NOCANCEL /SP- /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS /COMPONENTS="icons,ext\reg\shellhere,assoc,assoc_sh"
 del Git-2.22.0-64-bit.exe
 
 :pular_git
