@@ -44,6 +44,7 @@ echo .
 echo .
 python-3.7.3.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
 del python-3.7.3.exe
+pip install pyodbc
 
 :pular_python
 
